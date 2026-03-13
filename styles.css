@@ -175,6 +175,91 @@ body {
   font-size: 1.05rem;
 }
 
+/* --- About --- */
+.about {
+  background: radial-gradient(circle at top, rgba(201, 162, 39, 0.18), transparent 55%), var(--bg-dark);
+}
+.about-grid {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.about-text p {
+  margin: 0 0 1.2rem;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+/* --- Use cases --- */
+.use-cases {
+  background: var(--bg-card);
+}
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 3rem;
+}
+.use-case-card {
+  background: var(--bg-elevated);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 1.75rem 1.5rem;
+}
+.use-case-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0 0 0.5rem;
+}
+.use-case-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* --- CTA blocks --- */
+.cta-block {
+  text-align: center;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  padding: 2.25rem 1.75rem;
+  background: radial-gradient(circle at top left, rgba(201, 162, 39, 0.14), transparent 55%), var(--bg-elevated);
+}
+.cta-block--mid {
+  margin-top: 1rem;
+}
+.cta-block--bottom {
+  margin-top: 3rem;
+}
+.cta-block h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0 0 0.75rem;
+}
+.cta-block p {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+}
+.cta-sub {
+  font-size: 0.95rem;
+}
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  margin-top: 1rem;
+}
+.cta-link {
+  color: var(--accent-soft);
+  font-weight: 500;
+  text-decoration: none;
+}
+.cta-link:hover {
+  text-decoration: underline;
+}
+
 /* --- Process --- */
 .process { background: var(--bg-card); }
 .process-grid {
@@ -270,6 +355,34 @@ body {
   justify-content: center;
   color: var(--text-muted);
   font-size: 0.9rem;
+}
+
+/* --- FAQ --- */
+.faq {
+  background: var(--bg-dark);
+}
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+.faq-item {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 1.5rem 1.75rem;
+  background: var(--bg-card);
+}
+.faq-item h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0 0 0.5rem;
+}
+.faq-item p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 
 /* --- Contact --- */
