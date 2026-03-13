@@ -491,59 +491,53 @@ body {
   background: var(--bg-card);
   padding: 5rem 1.5rem;
 }
-.contact-details {
-  text-align: center;
-  margin-bottom: 2rem;
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: flex-start;
 }
-.contact-details a,
-.contact-details p {
-  display: block;
-  color: var(--text-muted);
-  text-decoration: none;
-  margin: 0.35rem 0;
-  font-size: 1rem;
+.contact-text .section-title,
+.contact-text .section-intro {
+  text-align: left;
+  margin-left: 0;
 }
-.contact-details a:hover {
-  color: var(--accent-soft);
-}
-.contact-form {
-  max-width: 480px;
-  margin: 0 auto;
-}
-.form-row {
-  margin-bottom: 1.25rem;
-}
-.form-row label {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-bottom: 0.4rem;
-  color: var(--text-muted);
-}
-.form-row input,
-.form-row textarea {
-  width: 100%;
-  padding: 0.85rem 1rem;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  background: #ffffff;
+.contact-card {
+  background: var(--bg-elevated);
+  border-radius: 16px;
   border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--text);
-  transition: border-color 0.2s;
+  padding: 1.75rem 1.75rem 1.5rem;
 }
-.form-row input::placeholder,
-.form-row textarea::placeholder {
+.contact-row + .contact-row {
+  margin-top: 1.1rem;
+}
+.contact-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
   color: var(--text-muted);
-  opacity: 0.7;
+  margin-bottom: 0.2rem;
 }
-.form-row input:focus,
-.form-row textarea:focus {
-  outline: none;
-  border-color: var(--accent);
+.contact-card a,
+.contact-card p {
+  margin: 0;
+  font-size: 0.98rem;
+  color: var(--text);
+  text-decoration: none;
 }
-.form-row textarea { resize: vertical; min-height: 120px; }
-.contact-form .btn { margin-top: 0.5rem; width: 100%; }
+.contact-card a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .contact-card {
+    margin-top: 1rem;
+  }
+}
 
 /* --- Footer --- */
 .footer {
