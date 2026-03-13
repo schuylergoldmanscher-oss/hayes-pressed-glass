@@ -87,9 +87,8 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   position: relative;
-  padding: 6rem 1.5rem 4rem;
+  padding: 7rem 1.5rem 5rem;
 }
 .hero-bg {
   position: absolute;
@@ -101,8 +100,15 @@ body {
 }
 .hero-content {
   position: relative;
-  text-align: center;
-  max-width: 720px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero-copy {
+  text-align: left;
 }
 .hero-tagline {
   font-size: 0.85rem;
@@ -113,16 +119,16 @@ body {
 }
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2.6rem, 5vw, 3.6rem);
   font-weight: 400;
   line-height: 1.15;
-  margin: 0 0 1rem;
+  margin: 0 0 1.25rem;
   letter-spacing: -0.02em;
 }
 .hero-sub {
   font-size: 1.1rem;
   color: var(--text-muted);
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 .btn {
   display: inline-block;
@@ -143,6 +149,61 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--accent-glow);
 }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.25rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.hero-secondary-link {
+  font-size: 0.95rem;
+  color: var(--accent-soft);
+  text-decoration: none;
+}
+.hero-secondary-link:hover {
+  text-decoration: underline;
+}
+.hero-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.hero-highlights li::before {
+  content: "•";
+  color: var(--accent-soft);
+  margin-right: 0.4rem;
+}
+.hero-media {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.hero-medallion-frame {
+  border-radius: 24px;
+  padding: 1.25rem;
+  background:
+    radial-gradient(circle at top left, rgba(201, 162, 39, 0.28), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.6), transparent 55%),
+    #141210;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+.hero-medallion-frame img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+.hero-media-caption {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 28rem;
+}
 .hero-scroll {
   position: absolute;
   bottom: 2rem;
@@ -156,7 +217,7 @@ body {
 
 /* --- Sections --- */
 .section {
-  padding: 5rem 1.5rem;
+  padding: 5.5rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
