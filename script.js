@@ -23,4 +23,27 @@
     link.addEventListener('click', closeNav);
   });
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  document.querySelectorAll('.copy-email-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+      if (!text) return;
+      function markCopied() {
+        btn.classList.add('copied');
+        var prev = btn.textContent;
+        btn.textContent = 'Copied';
+        setTimeout(function () {
+          btn.classList.remove('copied');
+          btn.textContent = prev;
+        }, 2000);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(markCopied).catch(function () {
+          window.prompt('Copy this address:', text);
+        });
+      } else {
+        window.prompt('Copy this address:', text);
+      }
+    });
+  });
 })();
